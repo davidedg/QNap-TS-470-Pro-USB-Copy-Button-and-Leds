@@ -7,10 +7,10 @@ USB copy button was not working and [existing projects](https://gist.github.com/
 \
 I found out that my hardware/bios version somehow requires an initialization code that I could not be bothered to reverse.
 \
-So here's the idea: run the initialization code straight from QNAP binaries while running chrooted inside TrueNAS.
+So here's the idea: run the initialization code straight from QNAP binary hal_daemon while running it chrooted inside TrueNAS.
 
 
-1. On your existing QNAP device (tis will create an archive under `/share/Public/qts-hal.tar.gz` - adjust accordingly): 
+1. On your existing QNAP device (this will create an archive under `/share/Public/qts-hal.tar.gz` - adjust accordingly): 
 
         cd / && tar czf /share/Public/qts-hal.tar.gz \
           sbin/{hal_daemon,hal_util,nasutil,get_ccode} \
